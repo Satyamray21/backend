@@ -6,8 +6,13 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/login.css'>
-    <script src='log.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/log.css'>
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+        }
+    </script>
 </head>
 <body>
     
@@ -29,7 +34,7 @@
                     <a href="#">Forget password?</a>
                 </div>
                 <div class="register-link">
-                  <p>Don't have account ? Please <a href="#">Register</a> here!</p>
+                  <p>Don't have account ? Please <a href="/register">Register</a> here!</p>
                 </div>
                 <div class="mode-toggle" onclick="toggleDarkMode()">
                     <i class="bx bxs-moon"></i>

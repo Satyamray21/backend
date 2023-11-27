@@ -7,24 +7,39 @@
     <div class="reg">
         <h1> Registration form </h1> 
         <form method="post" action="/register" th:object="${registerRequest}">
-            <div class="input-box">
-                <i class='bx bxs-user'></i>
-                <input type="text" name="login" placeholder="login" th:field="*{login}">
-            </div>
-            <div class="input-box">
-                <i class='bx bx-envelope'></i>
-                <input type="email" name="email" placeholder="email" th:field="*{email}">
-            </div>
-            
-            <div class="input-box">
-                <i class='bx bxs-lock-alt'></i>
-                <input type="password" name="password" placeholder="password" th:field="*{password}">
-            </div>
-            
-            <button type="submit" class="btn">Register</button>
-            <div class="signin">
-                <p>Already a member? <a href="/">main</a></p>
-            </div>
+            <h1>Please Register.</h1>
+                <div class="input-box">
+                 <label>Username </label>  <br>
+                 <input type="text" name="username" placeholder="Enter your username">
+
+                </div>
+                <div class="input-box">
+                    <label>First Name</label><br>
+                    <input type="text" name="fname" placeholder="Please Enter your first name">
+                </div>
+                <div class="input-box">
+                    <label>Second Name</label><br/>
+                    <input type="text" name="sname" placeholder="Place Enter your Second Name">
+                </div>
+                <div class="input-box">
+                    <label>Email</label><br>
+        
+                    <input type="email" name="email" placeholder="Enter your Email">
+                </div>
+                <div class="input-box">
+                    <label>Password</label><br>
+                    <input type="password" name="password" placeholder="Enter your password">
+
+                </div>
+                <div class="input-box">
+                    <label>Phone</label><br>
+                    <input type="number" name="phone" placeholder="Enter your Phone Number">
+
+                </div>
+                <button type="submit">Register</button>
+                <div class="sign">
+                   <p>Already member?</p> <a href="/">Sign in</a>
+                </div>
         </form>
     </div>
 </body>
