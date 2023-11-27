@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/login.css'>
+    <script src='log.js'></script>
+</head>
+<body>
+    
+        <div class="wrapper">
+            <form method ="post" action="/login" th:object="${loginRequest}">
+                <h1>Please Login </h1>
+                <div class ="input-box">
+                    <i class='bx bx-user-circle'></i>
+                    <input type="text" name="username" placeholder="Username">
+
+                </div>
+                <div class="input-box">
+                    <i class='bx bxs-lock-alt'></i>
+                    <input type="text" name="password" placeholder="Password">
+                </div>
+                <button type="submit" class="btn">Signin</button>
+                <div class="remember-forget">
+                    <input type="checkbox">Remember me
+                    <a href="#">Forget password?</a>
+                </div>
+                <div class="register-link">
+                  <p>Don't have account ? Please <a href="#">Register</a> here!</p>
+                </div>
+                <div class="mode-toggle" onclick="toggleDarkMode()">
+                    <i class="bx bxs-moon"></i>
+                </div>
+             </form>
+        </div>
+    
+    
+</body>
+</html>
