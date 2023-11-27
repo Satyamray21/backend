@@ -12,17 +12,17 @@ public class UserService {
     public UserService(UserRepoistory userRepoistory) {
         this.userRepoistory = userRepoistory;
     }
-public UserModel registerUser(String username,String fname,String sname,String password,String email,String phone){
+public UserModel registerUser(String username,String password,String email,String fname,String sname,String phone){
     if (username== null || password == null || username.isEmpty() || password.isEmpty()) {
         throw new IllegalArgumentException("Username and password cannot be null or empty.");
     
     }else{
         UserModel userModel = new UserModel();
-        userModel.setEmail(email);
-        userModel.setFname(fname);
-        userModel.setSname(sname);
-        userModel.setPassword(password);
         userModel.setUsername(username);
+        userModel.setFname(fname);
+         userModel.setSname(sname);
+       userModel.setEmail(email);
+        userModel.setPassword(password);
         userModel.setPhone(phone);
         return userRepoistory.save(userModel);
     }
